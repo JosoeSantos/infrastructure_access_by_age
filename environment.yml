@@ -199,4 +199,6 @@ dependencies:
   - zipp=3.21.0=py39hecd8cb5_0
   - zlib=1.2.13=h4b97444_1
   - zstd=1.5.6=h138b38a_0
+  - pip:
+      - psycopg2==2.9.10
 prefix: /Users/josoesantos/miniconda3/envs/trab_ibd
