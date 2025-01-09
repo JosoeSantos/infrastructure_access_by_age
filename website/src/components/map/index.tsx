@@ -35,8 +35,11 @@ export function BrasilMap() {
 
   return (
     <TooltipProvider>
-      <div ref={ref}>
-        <Tooltip>
+      <div
+        ref={ref}
+        className="max-w-[1000px] w-[90%] align-center self-center justify-self-center"
+      >
+        <Tooltip delayDuration={0}>
           <TooltipTrigger asChild>
             <svg viewBox="0 0 612.51611 639.04297">
               <CustomPath
@@ -176,7 +179,12 @@ export function BrasilMap() {
               />
             </svg>
           </TooltipTrigger>
-          <TooltipContent align="start" alignOffset={x} sideOffset={-y + 10}>
+          <TooltipContent
+            align="start"
+            alignOffset={x}
+            sideOffset={-y + 10}
+            hideWhenDetached
+          >
             <p>{hoveredState}</p>
           </TooltipContent>
         </Tooltip>
