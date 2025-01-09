@@ -87,8 +87,10 @@ export function AgePyramid() {
 function CustomTooltip({ active, payload, label }: any) {
   if (active && payload && payload.length) {
     return (
+      // @ts-ignore
       <ChartTooltip>
         <ChartTooltipContent
+          // @ts-ignore
           content={
             <div>
               <p className="font-semibold">{label}</p>
