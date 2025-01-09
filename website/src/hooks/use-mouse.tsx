@@ -1,14 +1,16 @@
 import { useEffect, useRef, useState } from "react";
-import type { MouseEvent } from "react";
+import type { MouseEvent, MouseEventHandler } from "react";
 
 export function useMouse<T extends HTMLElement = any>(
   options: { resetOnExit?: boolean } = { resetOnExit: false }
 ) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  const ref = useRef<T>();
+  const ref = useRef<T>(null);
 
-  const setMousePosition = (event: MouseEvent<HTMLElement>) => {
+  const setMousePosition: MouseEventHandler = (
+    event: MouseEvent<HTMLElement>
+  ) => {
     if (ref.current) {
       const rect = event.currentTarget.getBoundingClientRect();
 
