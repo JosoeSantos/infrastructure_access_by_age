@@ -11,7 +11,7 @@ const PolioAgeUF: React.FC<BarGraphProps> = async ({uf}: {uf:string}) => {
     data['6+'] = data['6']
 
     return (
-        <BarPerYear data={data} title='Vacinação contra poliomelite por idade' overrideDataKey='idade' overrideColor='#003f5c' />
+        <BarPerYear data={data} title='Vacinação contra poliomielite por idade' overrideDataKey='idade' overrideColor='#003f5c' />
     );
 };
 
